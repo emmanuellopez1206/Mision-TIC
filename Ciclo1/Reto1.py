@@ -1,6 +1,4 @@
 # Datos solicitados por consola
-from re import A
-
 
 CodigoProducto = int(input())
 NombreProducto = str(input())
