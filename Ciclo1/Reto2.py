@@ -1,7 +1,7 @@
 CantidadProductos = int(input())
 Cont = 0
 ValorTotalCompra = 0
-ValorTotalIVA= 0
+ValorTotalIVA = 0
 
 # Ciclo para ingresar los "N" productos ingresados por consola
 while Cont < CantidadProductos:
