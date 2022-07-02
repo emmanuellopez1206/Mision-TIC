@@ -29,18 +29,17 @@ while Cont < CantidadProductos:
     TipoIVA = input()
     ListTax.append(TipoIVA)
 
-    #Calcular el tipo de IVA para cada producto.
+    #Calcular el tipo de IVA para cada producto y añadirlo a su respectiva lista.
     ValorIVA = 0
     if TipoIVA == "1":
-        ValorIVA = 0
+        TotalIVA = 0
     elif TipoIVA == "2":
-        ValorIVA = 0.05
+        TotalIVA = ValorSinIVA * 0.05
     elif TipoIVA == "3":
-        ValorIVA = 0.19
+        TotalIVA = ValorSinIVA * 0.19
+    ListTaxValue.append(TotalIVA)
 
     # Cálculos solicitados y añadidos a sus respectivas listas.
-    TotalIVA = ValorSinIVA * ValorIVA
-    ListTaxValue.append(TotalIVA)
     ValorConIVA = ValorSinIVA + TotalIVA
     ListFinalValue.append(ValorConIVA)
     ValorTotalCompra += ValorConIVA
