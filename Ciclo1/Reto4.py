@@ -45,25 +45,20 @@ while Cont < CantidadProductos:
     ValorTotalCompra += ValorConIVA
     ValorTotalIVA += TotalIVA
 
-# Ordenamiento de las listas usando el método burbuja.
+# Creamos la función con el método burbuja para ordenar las listas en orden alfabético
+def Ordenar(Lista:list)->None:
+    Temporal = Lista[i]
+    Lista[i] = Lista[i+1]
+    Lista[i+1] = Temporal
+
+# Ordenamiento de las listas usando la función creada anteriormente.
 for k in range(len(ListName)-1):
     for i in range(len(ListName)-1):
         if ListName[i] > ListName[i+1]:
-            TemporalName = ListName[i]
-            ListName[i] = ListName[i+1]
-            ListName[i+1] = TemporalName
-
-            TemporalCode = ListCode[i]
-            ListCode[i] = ListCode[i+1]
-            ListCode[i+1] = TemporalCode
-            
-            TemporalProduct = ListProductValue[i]
-            ListProductValue[i] = ListProductValue[i+1]
-            ListProductValue[i+1] = TemporalProduct
-
-            TemporalFinal = ListFinalValue[i]
-            ListFinalValue[i] = ListFinalValue[i+1]
-            ListFinalValue[i+1] = TemporalFinal
+            Ordenar(ListName)
+            Ordenar(ListCode)         
+            Ordenar(ListProductValue)
+            Ordenar(ListFinalValue)
 
 # impresión de los productos según orden solicitado.
 for i in range(CantidadProductos):
