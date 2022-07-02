@@ -13,9 +13,6 @@ ListProductValue = []
 ListTaxValue = []
 ListFinalValue = []
 
-
-FinalList = [ListCode, ListName, ListProductValue, ListFinalValue]
-
 while Cont < CantidadProductos:
     Cont += 1
     # Datos solicitados por consola y añadidos a las listas
@@ -49,19 +46,19 @@ while Cont < CantidadProductos:
     ValorTotalCompra += ValorConIVA
     ValorTotalIVA += TotalIVA
 
-# Impresiones solicitadas.
+# Impresiones de longitud solicitadas.
 print(len(ListCode))
 print(len(ListName))
 print(len(ListLot))
 print(len(ListUnitValue))
 print(len(ListTax))
 
-# Porción de código usando la variable FinalList para imprimir los datos en el orden requerido.
-index = int(0)
-while index < len(ListCode):
-    for i in FinalList:
-        print(i[index])
-    index += 1
+# impresión de los productos según orden solicitado.
+for i in range(CantidadProductos):
+    print(ListCode[i])
+    print(ListName[i])
+    print(ListProductValue[i])
+    print(ListFinalValue[i])
 
 # Últimas impresiones solicitadas
 print(ValorTotalCompra)
